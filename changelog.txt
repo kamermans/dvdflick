@@ -1,0 +1,425 @@
+=========================----
+ DVD Flick Changelog
+=========================----
+
+Version 1.3.0.7
+ - Added: buttonSubtitleMenuX and buttonAudioMenuX button types that jump to a title's audio or button menu directly.
+ - Changed: Removed "High" encoding priority setting. It is not useful anyway (no speed gain, only chokes other processes).
+ - Changed: Updated FFmpeg to revision 19276.
+ - Changed: Updated ImgBurn to version 2.4.4.0.
+ - Changed: Removed "Enable menu" checkbox and replaced it by a "None" menu option.
+ - Fixed: Overflow error when loading large files.
+ - Fixed: Negative audio delays were not corrected.
+
+Version 1.3.0.6
+ - Fixed: Bug that caused certain files to be detected as having 0 FPS video.
+ - Changed: Updated 7-zip, MPLEX, delaycut, FFmpeg and mkvextract to their latest versions.
+ - Changed: Modifications to the installer script (XhmikosR).
+
+Version 1.3.0.5
+ - Added: 1.85 manual PAR option for titles.
+ - Added: Copy timestamps option for titles.
+ - Added: RealVideo 3 and 4 support. It's not perfect though.
+ - Added: GSM audio support.
+ - Changed: Made the Mosaic template less garish-looking. Not that it's been turned into a work of art now.
+ - Changed: MPLEX is now used instead of TCMPLEX.
+ - Changed: Updated FFmpeg to latest revision.
+ - Changed: Adjusted default burn speed and speed warnings.
+ - Changed: 2:3 pulldown is disabled by default now, but can be enabled from the advanced video options dialog.
+ - Changed: The "Do you want to proceed" dialog is no longer shown.
+ - Fixed: When running in unattended mode, "The project has been changed" dialog would still show up and keep DVD Flick from closing.
+ - Fixed: UTF-8 subtitle support.
+ - Fixed: Low\high burning speed warning even when burning to disc was disabled.
+ - Fixed: Long duration of adding a new video source.
+
+Version 1.3.0.4
+ - Added: Option to ignore an audio track's delay (audio track edit window).
+ - Added: Option to verify a disc after burning it.
+ - Added: Option to eject the tray after burning a disc.
+ - Fixed: Bug that would cause menu generation to die early on.
+ - Changed: Better subtitle short duration detection (kbosward).
+
+Version 1.3.0.3
+ - Fixed: MPEG-2 stream copy bug, source height was ignored.
+ - Fixed: A few issues with large system fonts.
+ - Fixed: Encoding of H264 in Matroska.
+ - Fixed: Wrong menu preview image when loading a project.
+ - Fixed: Wrong highlight\select colors in menu preview.
+ - Fixed: Subtitle reading bug on some UTF-8 files.
+ - Changed: A message now shows up if a project file is invalid.
+ - Changed: Listview improvements
+ - Changed: Upped scene change detection sensitivity.
+
+Version 1.3.0.2
+ - Fixed: Menu authoring failing with a File not found error.
+ - Fixed: Lockup when generating n chapters. Again.
+ - Fixed: Failure to multiplex using Mplex and more than one title.
+ - Changed: Red message dialog images for critical\exclamation messages.
+
+Version 1.3.0.1
+ - Fixed: Pressing Abort while a stream is being extracted no longer continues to the next step.
+ - Fixed: Lockup when generating n chapters.
+ - Fixed: Lockup\out of memory error caused by the loading of m2v files that have a similarly named file loaded as a subtitle.
+ - Fixed: Crash when using certain characters in destination folder names with menus turned on.
+ - Fixed: 25 FPS menus, even though NTSC was the target format.
+ - Changed: Disabled B-frame encoding and a few encoding tweaks. Less stuttering during dark scenes or fades.
+ - Changed: FancyLists can now recieve focus, and the arrow keys can be used to select items in them.
+ - Changed: Default browse folder upon first run is now the user's My Documents folder.
+
+Version 1.3.0.0
+ - Added: DVD menu functionality using templates. A few templates have been included already.
+ - Added: Option for mixed format DVDs for DVD players that can play both PAL and NTSC.
+ - Added: 23.976 FPS material now gets 2:3 pulldown performed on it when the target format is NTSC.
+ - Added: The option to force audio channel output to mono, stereo, surround or to infer it from the source (auto).
+ - Added: Option to always enable the first subtitle (under Playback).
+ - Added: Detects display aspect ratio (also known as pixel aspect ratio) of many more filetypes.
+ - Added: Option to go to the previous and next title when editing a title's properties.
+ - Added: Option to have subtitles auto-fit into view.
+ - Added: Subtitle lines that are too long are now chopped in two halves, otherwise they are clipped instead of just skipped.
+ - Added: -startunattended commandline parameter which encodes a project specified with -load and quits. It only logs errors, doesn't display them.
+ - Added: Welcome screen shown on first run.
+ - Added: Option to override a video source's pixel aspect ratio.
+ - Added: Option to specify burning speed.
+ - Changed: Interface font adapts to system font setting.
+ - Changed: Subtitle outline rendering is faster.
+ - Changed: Better scaling\resizing\padding calculations for video.
+ - Changed: DVD creation progress is better indicated.
+ - Changed: Force subtitle is now named Display as default.
+ - Changed: Slightly updated TCMPlex.
+ - Changed: HTML tags are now stripped from subtitles (rendering them isn't supported).
+ - Changed: SPUMux output is logged.
+ - Changed: Improved SSA and SRT subtitle parsing.
+ - Changed: Subtitles are now corrected for overlapping and too short durations.
+ - Changed: When adding a title all subtitles with the same base name are added to it too.
+ - Changed: Subtitle block dimensions are now always multiples of 2. Some DVD players only like such sizes and behave odd otherwise.
+ - Changed: When adding multiple files they are now added in alphabetical order.
+ - Changed: Tweaked encoding profiles.
+ - Changed: AMR narrowband and AMR wideband audio is not supported by this version. Support may return in the near future.
+ - Changed: Force MPEG-2 recompress option removed. 9 out of 10 MPEG-2 streams aren't fully DVD compliant anyway.
+ - Changed: Copy MPEG-2 stream option added to force copying MPEG-2 video streams that conform to the proper image width and height.
+ - Changed: 2nd encoding pass option removed. DVD Flick uses constant bitrate encoding thus it is useless.
+ - Changed: Audio track sources must be equal in compression, samplerate and channel count.
+ - Changed: Updated ImgBurn to 2.4.2.0.
+ - Changed: When burning to disc is selected but not create ISO, no ISO image is created and a direct-to-disc burn is done.
+ - Changed: Burner detection has been mostly rewritten. 95 - 99% of all burners should be detected now.
+ - Changed: A title's thumbnail is now used as subtitle preview background (but still letterboxed).
+ - Fixed: Audio delay could sometimes be detected as -1.
+ - Fixed: Opening a project file did not work.
+ - Fixed: Overscan border option adds top and bottom overscan bars again, now also of the proper size.
+ - Fixed: Using MicroDVD subtitles caused incomplete encodes (up until the first subtitle).
+ - Fixed: When running in portable mode, user profile directory is no longer created.
+ - Fixed: Character set selection\support for subtitles.
+ - Fixed: Creating chapters on every video source now works as expected.
+ - Fixed: Audio delay for VBR audio in AVI files could sometimes be calculated to be in minutes.
+ - Fixed: Bug that could cause discs that were too large to be created when an audio source was being copied (bad bitrate calculation).
+ - Fixed: When changing the process priority during encoding it would be reset when the current operation finished.
+ - Fixed: Crashing when an error occured. The error is now reported as it should be.
+ - ...and many more small changes and fixes throughout.
+
+Version 1.2.2.1
+ - Fixed: Bug in subtitle multiplexing that caused the encoding to abort.
+ - Fixed: Bug that caused authoring to fail on destination folders with an apostrophe.
+ - Fixed: Multiple subtitle tracks would cause the subtitle muxing stage to abort.
+ - Changed: Updated FFmpeg.
+ - Changed: NTFS recommended warning now always occurs.
+
+Version 1.2.2.0
+ - Added: A completely new subtitle reader and renderer.
+ - Added: Better syncing of audio and video.
+ - Added: Reminder that a blank disc needs to be inserted when burning project to disc.
+ - Added: Options to use a title's chapter settings as defaults and to apply them to all other titles in a project.
+ - Added: The option to create chapters on every new video source is no longer exclusive.
+ - Added: Option to change the sound volume by percentage.
+ - Added: Option to upmix mono or stereo sound to 5.1 surround.
+ - Changed: Reworked project settings dialog for more room for options.
+ - Changed: Warnings when a project destination path is used with extended ASCII characters, dvdauthor is not being very cooperative about these.
+ - Changed: Hopefully better support for displaying Unicode filenames.
+ - Changed: Visual refresh of logo and saturation change on icons.
+ - Fixed: Bitrate was fixed to 6000 Kbit/s before, which could lead to oversized discs and other oddities.
+ - Fixed: Forcing subtitles actually works now.
+ - Fixed: Bug that caused PAL DVDs to have wrong heights therefore not work in most DVD players.
+ - Fixed: Framerate misreported on computers that used commas as decimal separator.
+ - Fixed: Bug when selecting multiple files.
+ - Fixed: Adding certain types of files to a project could lead to a subscript out of range error.
+ - Fixed: Possible audio delay on AVI files was always detected as -1 ms.
+
+Version 1.2.1.4
+ - Added: Improved support for MPEG type container files.
+ - Added: Option to specify the amount of threads FFmpeg uses. This is set to the number of logical CPUs by default. Multi-core and (less so) HyperThreading CPUs will get a significant speed boost from this when encoding video.
+ - Added: Detects iTunes DRM encrypted files and says they cannot be encoded.
+ - Added: Options to select what should be done when a title has finished playing, as well as whether or not to loop the DVD's playback.
+ - Added: Option to force re-encoding of MPEG2 video even if it looks to be MPEG2 compliant.
+ - Added: Option to change encoder process priority during encoding.
+ - Added: Option to force a subtitle to be displayed.
+ - Added: Better support for interlaced file sources.
+ - Changed: It is no longer possible to combine video sources together into one title which are not of equal width, height, framerate and compression.
+ - Changed: errorlog.txt is generated with all the other encoding log files' most important info in it and more.
+ - Changed: Folder deletion before encoding starts now only deletes files that could be generated by the encoding process and only looks in the DVD subfolder. Also the warning is made much more agressive.
+ - Changed: Progress dialog for more application layout consistency.
+ - Changed: Removed audio adjustment options for simplification. Option to force encoding to stereo or mono might return if there are requests for it.
+ - Changed: Adjusted disc sizes.
+ - Changed: Audio encoding bitrate is raised from about 64 Kbps per channel to 96 Kbps.
+ - Changed: Removed Panavision aspect ratio and rewrote video scaling\resizing\padding calculations.
+ - Fixed: Burning to disc where the destination folder has a space in it's path name would fail.
+ - Fixed: Encoding fails when streams other than video or audio are present in the source file.
+ - Fixed: When using the overscan advanced option, padding was not always a required multiple of 2.
+ - Fixed: When correcting for overscan was enabled, video would not be the proper DVD standard size.
+ - Fixed: Bug where audio would get encoded with 0 channels or 0 Kb/s.
+ - Fixed: Unable to quit when the project has been modified and the main window is minimized.
+ - Fixed: Audio on final DVD was played too fast\illegible when specifying any other audio format than Auto.
+ - Fixed: Bugs in the calculation of required space. Was especially apparent if for example the first title was short and others long, or if subtitles were used.
+ - Fixed: A folder named 'Dennis' (that would be me :) ) could end up being created in Documents and Settings when burning to disc or creating an ISO file.
+ - Fixed: Issues with large (> 2 Gb) intermediary files that aborted the combining stage.
+ - Fixed: Possible crash when clicking Project Settings button.
+ - Fixed: When there were multiple audio or video streams in a source file, encoding would fail.
+
+Version 1.2.1.3
+ - Added: Commandline switches to specify data path and temp path. -datapath and -temppath respectively.
+ - Added: Option to add borders to the video to correct for TV overscan.
+ - Added: Half-D1 resolution support.
+ - Changed: Force nospanscan option for widescreen videos in dvdauthor.
+ - Changed: Updated ImgBurn to 2.3.0.0.
+ - Changed: Added fool-proofing to user input.
+ - Changed: Tweaked video encoding settings and bitrate constraints. B-frames are now also generated, as well as more sensitive scene change detection.
+ - Changed: TCMPlex is now used to multiplex instead of mplex.
+ - Changed: Updated to dvdauthor-0.6.14.
+ - Changed: Destination folder only has it's containing files deleted, not the entire folder anymore.
+ - Fixed: Installation issue under Windows Vista.
+ - Fixed: Burn to disc checkbox was not saved as default.
+ - Fixed: An audio track with multiple audio sources would not combine into one and abort the encoding process.
+ - Fixed: MPEG2 video streams that were copied over would abort the encoding process because of a missing space character.
+ - Fixed: Custom video bitrate would still stay within it's predefined boundaries despite it being lower or higher.
+ - Fixed: Locale issues arising from period or comma decimal indicators.
+ - Fixed: Crash when an AVI with an AC3\MP3 audio data chunk of 0 bytes was added.
+ - Fixed: Sudden close when loading a possibly corrupt AVI file.
+ - Fixed: Added proper XML header tag with encoding to dvdauthor and spumux XML files. Fixes usage of foreign characters in path names.
+ - Fixed: Crash when adding a new audiotrack to a title.
+
+Version 1.2.1.2
+ - Added: Custom video bitrate option.
+ - Added: Option to manually set a subtitle's framerate, so that it will get converted to the movie's framerate.
+ - Added: Warning to prevent graphical subtitle files from being loaded.
+ - Added: Drag and drop support for video sources, audio tracks and subtitle files to titles.
+ - Added: Minimize to tray button in the progress dialog.
+ - Added: Option to set encoding process priority.
+ - Added: Option to save a subtitle's settings as default.
+ - Added: Options for more audio encoding control.
+ - Fixed: Subtitle desyncing.
+ - Fixed: Some video's aspect ratios were not properly detected as 2.35:1.
+ - Fixed: Bug that prevented subtitles from being muxed.
+ - Changed: Rewrote DVD recorder detection. It should detect all SCSI3-capable recorder drives now.
+ - Changed: Tweaked video encoding options a bit more.
+
+Version 1.2.1.1
+ - Added: Project information tidbits on the bottom right.
+ - Added: Check to see if the Windows Management Instrumentation service is started before trying to enumerate DVD recorders.
+ - Fixed: Project files with subtitles were not loaded correctly.
+ - Fixed: Wrong disc space requirement calculation if an audio source had a delay.
+ - Fixed: Some files used to produce choppy audio, tweaked audio encoding parameters.
+ - Fixed: Audio sources not sampled at 48000 Hz are now properly resampled (fixes many files not playing right).
+ - Fixed: Bug with OGM files and embedded subtitles\streams unknown to FFmpeg.
+ - Changed: When your disc is full, you can now opt to continue encoding anyway.
+ - Changed: Cygwin DLLs have been moved back to dvdauthor folder.
+ - Changed: Configuration and temporary file access is now specific to each user account, and stored in {userprofile}\Application Data\DVD Flick.
+ - Changed: Default project destination folder is now the user's My Documents\DVD folder again.
+ - Changed: Minimum average video bitrate is now 2500 Kbit\s, and maximum is now 9500.
+ - Changed: Slightly updated recorder drive detection.
+ - Changed: Unused sources are no longer saved in a project file.
+ - Changed: Message displayed when a project's disc was full so that it cannot be misinterpreted as a full hard disk.
+ - Changed: Updated DVDAuthor binaries to their latest versions (here I was thinking it had died).
+
+Version 1.2.1.0
+ - Added: Create chapters on every new video source.
+ - Added: Custom dialog boxes.
+ - Added: Automatic detection and fixing of AC3 or MP3 audio delay in AVI files, muxed by very naughty AVI muxers.
+ - Changed: New handling of configuration files. Thumbnails and source file properties are stored inside dfproj files (which are just uncompressed zip files) to speed up loading a new project.
+ - Changed: Cygwin DLL files are installed to the system folder to prevent version mismatches.
+ - Changed: Default output folder is now in the DVD Flick program folder to prevent access denied on another user account's My Documents folder.
+ - Changed: Updated supported filetype list.
+ - Changed: When moving a video source in a title, if it has any audio tracks that have audio sources with the same source file as the video they will be moved as well.
+ - Changed: Updated guide.
+ - Fixed: Proper calculation of average PSNR value.
+ - Fixed: Use as defaults button on the project settings dialog.
+
+Version 1.2.0 Final
+ - Fixed: Bug with muxing subtitles and apostrophes in filenames.
+ - Fixed: Keep intermediate files option did not work.
+ - Changed: Tweaked encoding profile settings.
+ - Changed: Tweaked audio encoding\sync settings. Maybe some movies that previously had desynced audio will now sync properly.
+ - Changed: A cancel button...
+ - Changed: No more "official" support for VOB files. Because of a limitation of the MPEG-TS file format it is not easily possible to calculate the duration of a VOB file, thus all calculations which need this are completely wrong and odd results can happen. An "import DVD" feature is still planned for some later version.
+
+Version 1.2.0 RC 4
+ - Fixed: Keep encoded files and Two-pass encoding options were not remembered when pressing Use as defaults. Thanks to Guy Sturgis.
+ - Fixed: Updated recorder drive detection. External FireWire devices are detected also now. Thanks to Guy Sturgis.
+ - Fixed: Overflow error when starting a video encode, depending on the time of day oddly enough.
+ - Fixed: Badly reported available disc space on large drives.
+ - Fixed: Bug with special characters in filenames that would prevent DVD Author from doing it's job.
+ - Fixed: Hopefully the not being able to find any recorders error message.
+ - Fixed: Chaptering did not always create the right amount of chapters. (Deja vu...)
+ - Fixed: Recorders are detected again under Windows 2000.
+ - Fixed: Combining video\audio sources would result in an out of memory error.
+ - Fixed: Cancelling encoding would skip to encoding the next video\audio sequence before.
+ - Changed: Last directory that the user was in when adding a title of source is now remembered.
+ - Changed: More clear messages when a project is opened and one of it's source files has been deleted\renamed\moved.
+ - Changed: More checks for unsupported encoding formats.
+ - Changed: File concatenation uses cygwin's cat.exe now to also support > 2 Gb files.
+
+Version 1.2.0 RC 3
+ - Fixed: If the IMAPI burning COM service was disabled, DVD Flick would display an error and refuse to load.
+ - Fixed: Combinging files larger than 2 Gb is now also supported.
+ - Fixed: Disc space meter was not filled if a custom video bitrate was selected.
+ - Fixed: Video was not encoded at the full requested bitrate, which meant bad quality and finished discs would never be the target size. There should be a significant quality improvement.
+ - Fixed: Crash when trying to load unsupported filetypes.
+ - Fixed: FFmpeg's 2-pass encoding log files are now put into the project's destination folder.
+ - Changed: Dropped IMAPI CD\DVD burner detection in favour of parsing WMI PNP strings. Fixes 'Failed to instantiate CDBurn implementation' error as well as make it possible to enumerate recorders on Windows 2000.
+ - Changed: More progress indication data during video encoding.
+ - Changed: Aspect ratio can now also be inferred from the source file if it is MPEG. Thanks to Evandro Gouveia.
+ - Changed: Added Square aspect ratio for completeness.
+ - Changed: Discspace calculation to take into account more muxing overhead and subtitles.
+ - Changed: Video sources limitation that they all have to have the same dimensions and framerate has been removed.
+
+Version 1.2.0 RC 2
+ - Fixed: Dependency issues on some ActiveX components.
+ - Fixed: No longer able to burn when no recorders are installed on the system.
+ - Fixed: Some possible localization issues (commas and periods). Thanks to Evandro Gouveia.
+ - Fixed: Bug where displaying the project settings dialog would crash.
+ - Changed: Disc space and average video bitrate calculation for a tighter fit, thanks to Evandro Gouveia.
+ - Changed: Authored DVDs jump to the next title now and loop back to the first after the last one. Also fixes some DVD player compatibility problems. Thanks to Evandro Gouveia.
+ - Changed: Tweaked maximum bitrates a bit. More maximum bitrate for video now.
+ - Changed: Tweaked FFmpeg video encoder for different encoding profiles. Should give marginally better quality except for the Fastest profile.
+
+Version 1.2.0 RC 1
+ - Added: File information report is generated when a file is loaded. Saved to application path\report.txt.
+ - Added: The last output directory is now remembered.
+ - Added: Video aspect ratio is auto-detected now.
+ - Added: Panavision aspect ratio, which is fit into 16:9 widescreen for now.
+ - Added: Redone encoding progress window\logging.
+ - Added: Support for WMV, WMA, MPEG2, FLV, 3GP and many others thanks to FFmpeg. For a full list, see http://FFmpeg.mplayerhq.hu/FFmpeg-doc.html#SEC20
+ - Added: Video sources which are MPEG2 and the same width, height and FPS as the source video will not be re-encoded but rather copied.
+ - Added: Upon reinstall the old dvdflick.cfg is deleted, and default target format (PAL or NTSC) is autodetected based on Windows locale info.
+ - Added: Dorky little info-buttons next to some configurable items.
+ - Added: ISO image creation and burning to disc using ImgBurn.
+ - Added: NTSC-Film target for 24 FPS film material.
+ - Added: Cancel button to interrupt DVD creation process.
+ - Added: Option to keep encoded audio\video files for further usage.
+ - Changed: Abandoned DirectShow, HCEnc, AVISynth and Aften in favour of FFmpeg. Hopefully the last big internal makeover.
+ - Changed: Adjusted default disc sizes and added some.
+ - Changed: Can now only shut down when the DVD creation has finished, under Windows 2000 and upwards too.
+ - Fixed: Multiple video sources would repeat the first source instead of showing the next.
+ - Fixed: 5.1 or 6 channel AC3 audio used to get encoded to 5 channels.
+ - Fixed: Problems depending on Windows locale decimal point settings.
+ - Fixed: Destination folder in use looping message dialog.
+
+Version 1.1.0 Final
+ - Fixed: Multiple error dialogs when opening a bad\unsupported file.
+ - Fixed: Crash when a thumbnail for a file that could not be rendered was attempted to be rendered.
+ - Changed: Updated HCEnc to 0.19.1.
+
+Version 1.1.0 RC 3
+ - Fixed: Crash when starting to extract audio from a non-AC3 source. This one was painful.
+ - Changed: File information detection to hopefully be stable, or at least report a usable error instead of a crash.
+ - Changed: AVISynth, FFDShow and Haali Media Splitter are now optional install items for those that keep them up-to-date manually.
+ - Changed: Changed guide so that images are displayed as block for lower resolution screens.
+
+Version 1.1.0 RC 2
+ - Added: A guide that describes some basic tasks. Accessible through the Start Menu folder.
+ - Added: Operating system and DirectX version checks.
+ - Added: Button to open included guide from the main dialog.
+ - Added: More error checks and fixes in DSLib.
+ - Fixed: Chapter creation would not work because of missing media data.
+ - Fixed: Times sometimes displayed 60 seconds instead of 1 minute.
+ - Fixed: Chapters with 0 as interval or in number can not be created anymore.
+ - Fixed: Project saving\loading.
+ - Changed: Got rid of the advanced mode to counter user interface obfuscation.
+ - Changed: Disabled advanced compilation options in VB. Assume No Aliasing most importantly.
+
+Version 1.1.0 RC 1
+ - Added: New title list with thumbnails.
+ - Added: Thanks to DirectShow, support for a lot more file formats and audio codecs.
+ - Added: Combining several similar video files into one title (Title properties Video sources tab).
+ - Added: DirectShow filters for some common container, audio and video formats and codecs.
+ - Added: 4:3 Pan&scan (Zoomed) target aspect ratio added. Not terribly useful IMO, but it's there now.
+ - Added: Disk space requirement calculation for a project. A warning will be shown if there is not enough free space.
+ - Added: Fastest encoding profile which disables scene change detection and has lower DC precision in HCEnc.
+ - Added: TV safe area borders (10% on each axis) in the subtitle preview display.
+ - Added: "Advanced mode" switch button. It hides some more advanced functions when disabled, which it is by default.
+ - Added: Project settings can be set as default now.
+ - Added: Window position and state is saved.
+ - Changed: Internals use DirectShow for media identification and rendering now.
+ - Changed: Audio streams are now called audio tracks. Makes more sense to the commoner.
+ - Changed: Title properties user interface changes.
+ - Changed: Aften (A Fifty-Two Encoder) is now used to encode to AC3 audio.
+ - Changed: Audio is now always upsampled to 48000 Hz to be DVD compliant.
+ 
+Version 1.0.0 Final
+ - Changed: Disabled Windows XP theme support, the glitches it produces are bad.
+ - Fixed: Borders were added on the next title if it did not need borders at all.
+ - Fixed: More than one title in a project would not author the final DVD.
+ - Fixed: When chapters were made by time interval and the source FPS needed to be changed, chapter times didn't match up.
+ - Fixed: Audio sources with something different than 2 or 5 channels would be encoded at 0 Kbps.
+
+Version 1.0.0 RC 1
+ - Added: When a title is added, the source file's timestamp is compared to a possibly already added source and reloaded if it has been changed.
+ - Added: All applications are logged during encoding now.
+ - Added: Support for different subtitle character sets.
+ - Added: Framerates are now properly converted to what is expected of the target DVD format (NTSC or PAL). It uses AviSynth's ChangeFPS blend mode, so some motion blurring will occur.
+ - Added: Subtitle timings are modified along with the framerate now (PAL subs would not always end up synced when used on NTSC videos and vice versa).
+ - Changed: DVD encoding directory creation is a bit more helpful now.
+ - Changed: Default subtitle font size is bigger. The preview doesn't quite match what shows on the final product.
+ - Changed: Newer Cygwin DLLs for the DVDAuthor package. Spumux has had a tiny bit of logic changed.
+ - Fixed: Chapter times above one hour had time missing.
+ - Fixed: Subtitle muxing now muxes and muxes to the right stream.
+ - Fixed: Project files were saved as .adproj instead of .dfproj.
+ - Fixed: No PULLDOWN HCEnc directive used when not needed.
+ - Fixed: Chapters by interval of n minutes caused the encoding process to abort.
+ - Fixed: Proper number of chapters are now created, and none at 0:00.
+ - Fixed: Projects with multiple audio streams and subtitles and titles are now loaded right.
+
+Version 0.9.3
+ - Added: Drag and drop support. Drag your video files into the title list to add them.
+ - Added: Application startup logging.
+ - Changed: A subtitle's language is now also displayed in the title dialog.
+ - Changed: When a part of the encoding process fails, it no longer continues.
+ - Fixed: Fonts with duplicate display names are output to the application log and only the first instance of them is loaded.
+ - Fixed: Caption did not always update to display the current project's filename.
+ - Fixed: Displayed title lengths were not always 0:00:00 formatted.
+
+Version 0.9.2
+ - Changed: Auto video bitrate calculation takes the maximum of 9.8 Mb\s into account. Total title bitrate will be kept below the 9.8Mb threshold.
+ - Changed: HC Encoder's INI file is now placed in the project's destination directory as well.
+ - Changed: Maximum video bitrate is now 8 Mb\s for DVD player compatibility purposes.
+ - Changed: Warning when trying to create the DVD if there are errors found in the project.
+ - Changed: GNU GPL 2 licensing.
+ - Fixed: Last AVIDVD signs removed. Previous version's project files are no longer readable by this version.
+ - Fixed: NTSC\PAL video format, audio format and video aspect ratio are now written to the DVDAuthor XML file.
+ - Fixed: Version strings.
+ - Fixed: Tabstops and minor UI changes.
+ - Fixed: Kilobits are measured in 1000's, not 1024's.
+ - Fixed: Multiple DVDs made would have the progress window not update correctly.
+
+Version 0.9.1
+ - Changed: More warnings can appear during the encoding process to indicate that a stage or part of it was not completed successfully.
+ - Fixed: avidvd.log output file is now called dvdflick.log.
+ - Fixed: Invalid DVDAuthor XML file generation.
+ - Fixed: Resizing did not take heights that weren't a multiple of 2 into account.
+
+Version 0.9
+ - Added: Support for Windows XP themed UI.
+ - Added: Maximum audio and maximum subtitle checks, 8 and 32 respectively according to the DVD specs.
+ - Added: Check if source files still exist when a project is opened.
+ - Added: Last directory that was browsed in is now remembered.
+ - Added: Ability to create chapters.
+ - Added: File association with .dfproj files.
+ - Changed: Double clicking a title or one of it's information lines will open it's edit window.
+ - Changed: HCEnc's scene change detection is now enabled.
+ - Changed: Display project filename in main window titlebar.
+ - Fixed: DVD-9 size is supposed to be 8 GB.
+
+Version 0.8
+ - Added: Support for MPEG audio streams and WAV file audio streams.
+ - Added: Subtitle support.
+ - Changed: Less memory consumption. AVI indexes are not loaded into memory fully, but instead read entry by entry when a stream needs to be demuxed. Not faster but it would eat a lot of memory before.
+
+Version 0.7
+ - Everything.

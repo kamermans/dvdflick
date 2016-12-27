@@ -1,0 +1,186 @@
+afghanistan,1
+albania,1
+algeria,1
+angola,1
+antigua,2
+argentina,1
+australia,1
+austria,1
+azores island,1
+bahamas,2
+bahrain,1
+bangladesh,1
+barbados,2
+belgium,1
+benin,1
+bermuda,2
+bhutan,1
+bolivia,2
+botswana,1
+brazil,1
+brunei,1
+bulgaria,1
+burkina faso,1
+burma,2
+burundi,1
+cambodia,2
+cameroon,1
+canada,2
+canary islands,1
+central african republic,1
+ceuta,1
+chad,1
+chile,2
+china,1
+colombia,2
+comoros,1
+congo,1
+costa rica,2
+croatia,1
+cuba,2
+cyprus,1
+czech republic,1
+denmark,1
+diego garcia,2
+djibouti dem republic,1
+dominica republic,2
+ecuador,2
+egypt,1
+el salvador,2
+ethiopia,1
+fiji,1
+finland,1
+france,1
+gabon,1
+gambia,1
+germany,1
+ghana,1
+gibraltar,1
+greece,1
+greenland,2
+grenada,2
+guadalupe,1
+guam,2
+guatemala,2
+guiana (french),1
+guinea,1
+guinea-bissau,1
+guyana,1
+haiti,2
+hawaii,2
+honduras,2
+hong kong,1
+hungary,1
+iceland,1
+india,1
+indonesia,1
+iran,1
+iraq,1
+ireland,1
+israel,1
+italy,1
+ivory coast,1
+jamaica,2
+japan,2
+jordan,1
+kenya,1
+kiribati,1
+korea (d.p.r),1
+korea (rep.),2
+kuwait,1
+laos,1
+lebanon,1
+lesotho,1
+liberia,1
+libya,1
+luxembourg,1
+macao,1
+madagascar,1
+madeira,1
+malawi,1
+malaysia,1
+maldives,1
+mali,1
+malta,1
+martinique,1
+mauritus,1
+mexico,2
+microesia,2
+midway island,2
+monaco,1
+mongolia,1
+monoca,1
+morocco,1
+mozambique,1
+myanmar,2
+namibia,1
+nepal,1
+netherlands antilles,2
+netherlands,1
+new caledonia,1
+new zeland,1
+nicaragua,2
+niger,1
+nigeria,1
+norway,1
+okinawa,2
+oman,1
+pakistan,1
+panama,2
+papua new guinea,1
+parguay,1
+peru,2
+philippines,2
+portugal,1
+puerto rico,2
+qatar,1
+reunion,1
+romania,1
+russia,1
+rwanda,1
+samoa,2
+saudi arabia,1
+senegal,1
+seychelles,1
+sierra leone,1
+singapore,1
+slovakia,1
+somalia,1
+south africa,1
+spain,1
+srilanka,1
+st.kitts,2
+st.luica,2
+st.vincent,2
+sudan,1
+surinam,2
+swaziland,1
+sweden,1
+switzerland,1
+syrian arab republic,1
+tahiti islands,1
+taiwan,2
+tanzania,1
+thailand,1
+togo,1
+trinidad & tobago,2
+tunisia,1
+turkey,1
+turks & calcos islands,2
+tuvlu,1
+uganda,1
+united arab emirates,1
+united kingdom,1
+united states,2
+uruguay,1
+ussr-former,1
+venezuela,2
+vietnam,1
+virgin islands,2
+western sahara,1
+yemen (dem. republic of),2
+yemen arab republic,1
+yugoslavia,1
+zaire,1
+zambia,1
+zanzibar,1

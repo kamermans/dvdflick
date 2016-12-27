@@ -1,0 +1,5 @@
+WMV9, Windows Media Video 9
+drmi / 0x696D7264, iTunes DRM
+WVP2 / 0x32505657, Microsoft Photostory 2
+MSS1 / 0x3153534D, Microsoft Windows Screen Video
+PTEV / 0x56455450, Picture To Exe Video

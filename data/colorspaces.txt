@@ -1,0 +1,39 @@
+yuv420p,0
+yuva420p,1
+yuyv422,2
+rgb24,3
+bgr24,4
+yuv422p,5
+yuv444p,6
+rgb32,7
+yuv410p,8
+yuv411p,9
+rgb565,10
+rgb555,11
+gray16be,12
+gray16le,13
+gray8,14
+mono white,15
+mono black,16
+Palette,17
+yuvj420p,18
+yuvj422p,19
+yuvj444p,20
+xvmc_mpeg2_mc,21
+xvmc_mpeg2_idct,22
+uyvy422,23
+uyyvyy411,24
+rgb32x,25
+bgr32x,26
+bgr32,27
+bgr565,28
+bgr555,29
+bgr8,30
+bgr4,31
+bgr4 byte,32
+rgb8,33
+rgb4,34
+rgb4 byte,35
+nv12,36
+nv21,37
+yuv440p,38

@@ -1,0 +1,74 @@
+DVD Flick
+===========
+To compile DVD Flick, you will need Microsoft Visual Basic 6.0 Standard,
+Professional or Enterprise Edition, using their Service Pack 6.
+To compile the support DLL, you will need to use GCC\MinGW\MSYS.
+
+
+Setup
+=======
+To compile the setup executable, you need Inno Setup version 5.1.6 or higher.
+It references the following files in the shared directory;
+
+asycfilt.dll
+comcat.dll
+mscomct2.ocx
+mscomctl.ocx
+msvbvm60.dll
+oleaut32.dll
+olepro32.dll
+richtx32.ocx
+scrrun.dll
+mbmouse.ocx
+stdole.tlb
+trayicon_handler.ocx
+
+Some other executables may be needed, they can be found in a default DVD Flick
+installation folder. See "External programs".
+
+
+TCMPlex
+=========
+To compile TCMPlex, you will need the MinGW compiler and MSYS. Simply cd'ing to
+it's source directory and running make is sufficient.
+
+
+External programs
+===================
+The following external programs used by DVD Flick also need to be added before
+your custom compiled version will function completely;
+
+\delaycut
+DelayCut
+
+\imgburn
+ImgBurn
+
+\bin
+FFmpeg
+cat
+TCMPlex
+Pulldown
+MPEG Toolbox
+BMP2PNG
+DVDAuthor
+SPUMux
+MPlex
+
+\mkvextract
+MKVExtract
+MKVExtract support DLLs
+
+You can copy their directories and files from any normal DVD Flick installation.
+
+
+FFMPEG
+========
+For the included FFmpeg binary, the following configure paramaters were used on a clean SVN checkout of FFmpeg:
+
+--enable-gpl --enable-memalign-hack --enable-runtime-cpudetect --disable-protocols --disable-indevs --disable-bsfs --disable-filters --disable-network --disable-ffplay --disable-ffserver --disable-encoders --disable-muxers --enable-w32threads --enable-libgsm --enable-libfaad --enable-encoder=mjpeg --enable-encoder=mpeg2video --enable-encoder=ac3 --enable-demuxers --enable-muxer=ac3 --enable-muxer=image2 --enable-muxer=mpeg2video --enable-muxer=dvd --enable-avisynth --enable-protocol=file --enable-protocol=pipe --enable-encoder=rawvideo --enable-muxer=yuv4mpegpipe
+
+
+Resources
+===========
+The resources were created using Adobe Photoshop and Illustrator CS2.

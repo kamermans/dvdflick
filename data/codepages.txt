@@ -1,0 +1,14 @@
+1256,Arabic
+1257,Baltic
+1250,Central Europe
+1251,Cyrillic
+1253,Greek
+1255,Hebrew
+932,Japanese Shift-JIS
+949,Korean
+1252,Latin 1
+936,Simplified Chinese
+874,Thai
+950,Traditional Chinese
+1254,Turkish
+1258,Vietnam
